@@ -1,0 +1,9 @@
+body {
+    background: url("/images/andrew-tanglao-436401-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.card {
+    margin-top: 10vh;
+    background-color: rgba(255,255,255,0.8);
+}

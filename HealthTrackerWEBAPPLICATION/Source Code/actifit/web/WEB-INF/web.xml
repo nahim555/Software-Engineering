@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>Controller.SessionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>/dashboard/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>Controller.RegistrationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/authentication/sign-up</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/authentication/sign-in</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>Controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/authentication/sign-out</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogWeightServlet</servlet-name>
+        <servlet-class>Controller.LogWeightServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogWeightServlet</servlet-name>
+        <url-pattern>/dashboard/weight/log</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddActivityServlet</servlet-name>
+        <servlet-class>Controller.AddActivityServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddActivityServlet</servlet-name>
+        <url-pattern>/dashboard/diary/add-activity</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConsumeMealServlet</servlet-name>
+        <servlet-class>Controller.ConsumeMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConsumeMealServlet</servlet-name>
+        <url-pattern>/dashboard/diary/consume-meal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveConsumedMealServlet</servlet-name>
+        <servlet-class>Controller.RemoveConsumedMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveConsumedMealServlet</servlet-name>
+        <url-pattern>/dashboard/diary/remove-consumed-meal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveActivityServlet</servlet-name>
+        <servlet-class>Controller.RemoveActivityServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveActivityServlet</servlet-name>
+        <url-pattern>/dashboard/diary/remove-activity</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFoodServlet</servlet-name>
+        <servlet-class>Controller.AddFoodServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddFoodServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/add-food</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveFoodServlet</servlet-name>
+        <servlet-class>Controller.RemoveFoodServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveFoodServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/remove-food</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddMealServlet</servlet-name>
+        <servlet-class>Controller.AddMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddMealServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/add-meal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveMealServlet</servlet-name>
+        <servlet-class>Controller.RemoveMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveMealServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/remove-meal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFoodToMealServlet</servlet-name>
+        <servlet-class>Controller.AddFoodToMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddFoodToMealServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/edit-meal/add-food</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveFoodFromMealServlet</servlet-name>
+        <servlet-class>Controller.RemoveFoodFromMealServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveFoodFromMealServlet</servlet-name>
+        <url-pattern>/dashboard/food-meals/edit-meal/remove-food</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddUserToGroupServlet</servlet-name>
+        <servlet-class>Controller.AddUserToGroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddUserToGroupServlet</servlet-name>
+        <url-pattern>/dashboard/group/add-user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LeaveGroupServlet</servlet-name>
+        <servlet-class>Controller.LeaveGroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LeaveGroupServlet</servlet-name>
+        <url-pattern>/dashboard/group/leave</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateGroupServlet</servlet-name>
+        <servlet-class>Controller.CreateGroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateGroupServlet</servlet-name>
+        <url-pattern>/dashboard/group/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateInfoServlet</servlet-name>
+        <servlet-class>Controller.UpdateInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateInfoServlet</servlet-name>
+        <url-pattern>/dashboard/settings/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdatePasswordServlet</servlet-name>
+        <servlet-class>Controller.UpdatePasswordServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdatePasswordServlet</servlet-name>
+        <url-pattern>/dashboard/settings/update-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddWeightLossGoalServlet</servlet-name>
+        <servlet-class>Controller.AddWeightLossGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddWeightLossGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/add-weight-loss-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveWeightLossGoalServlet</servlet-name>
+        <servlet-class>Controller.RemoveWeightLossGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveWeightLossGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/remove-weight-loss-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddDistanceGoalServlet</servlet-name>
+        <servlet-class>Controller.AddDistanceGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddDistanceGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/add-distance-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveDistanceGoalServlet</servlet-name>
+        <servlet-class>Controller.RemoveDistanceGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveDistanceGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/remove-distance-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddTimeGoalServlet</servlet-name>
+        <servlet-class>Controller.AddTimeGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddTimeGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/add-time-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveTimeGoalServlet</servlet-name>
+        <servlet-class>Controller.RemoveTimeGoalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveTimeGoalServlet</servlet-name>
+        <url-pattern>/dashboard/goals/remove-time-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <servlet-class>Controller.ForgotPasswordServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <url-pattern>/authentication/forgot-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>Controller.ResetPasswordServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/authentication/reset-password</url-pattern>
+    </servlet-mapping>
+
+</web-app>
