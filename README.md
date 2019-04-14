@@ -1,3 +1,3 @@
 # Software-Engineering
 
-Screenshots of web application in HealthTrackerWebApplication/screenshots
+Screenshots of web application in HealthTrackerWEBAPPLICATION/screenshots
